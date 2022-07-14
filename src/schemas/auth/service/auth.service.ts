@@ -35,7 +35,7 @@ export class AuthService {
 
     if (!findUser) throw new BadRequestException('user not found');
 
-    if (!bcrypt.compareSync(userLoginDto.password, findUser.password)) throw new BadRequestException('password incorrect');
+    if (!bcrypt.compareSync(userLoginDto.password, findUser.password)) throw new BadRequestException('password not confirm');
 
     const { password, ...result } = findUser;
 
