@@ -46,4 +46,9 @@ export class AuthController {
     return this.authService.findUserByToken(userInfo);
   }
 
+  @Get('users')
+  async getAllUser(): Promise<any> {
+    return this.authService.getAllUser()
+  }
+
 }

@@ -101,4 +101,8 @@ export class AuthService {
     const payload = { userId: user.id, userRole: user.role };
     return this.jwtService.sign(payload, { expiresIn: '12h' });
   }
+
+  async getAllUser(): Promise<any> {
+    return await this.userRepo.find()
+  }
 }
