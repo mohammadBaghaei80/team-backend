@@ -105,4 +105,8 @@ export class AuthService {
   async getAllUser(): Promise<any> {
     return await this.userRepo.find()
   }
+
+  async getCountUser(): Promise<any> {
+    return await this.userRepo.count()
+  }
 }

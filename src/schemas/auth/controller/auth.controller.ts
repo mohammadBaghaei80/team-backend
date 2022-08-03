@@ -51,4 +51,10 @@ export class AuthController {
     return this.authService.getAllUser()
   }   
 
+
+  @Get('count-users')
+  async getCountUser(): Promise<any> {
+    return this.authService.getCountUser()
+  }
+
 }
