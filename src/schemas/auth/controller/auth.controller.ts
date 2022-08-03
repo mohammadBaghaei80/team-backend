@@ -49,6 +49,6 @@ export class AuthController {
   @Get('users')
   async getAllUser(): Promise<any> {
     return this.authService.getAllUser()
-  }
+  }   
 
 }
